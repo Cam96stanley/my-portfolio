@@ -8,10 +8,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { projectData } from "@/data/projectData";
 import { backendStack, frontendStack } from "@/data/techStacks";
+import ContactForm from "@/ui/components/ContactForm";
 import ProjectCard from "@/ui/components/ProjectCard";
 import { Button } from "@/ui/primitives/Button";
-import { Input } from "@/ui/primitives/Input";
-import { Textarea } from "@/ui/primitives/Textarea";
 
 export default function Home() {
   return (
@@ -67,7 +66,7 @@ export default function Home() {
             <p className="heading-2">Projects</p>
           </div>
         </div>
-        <div className="px-4 md:px-8">
+        <div className="px-4 md:px-24">
           {projectData.map((project, i) => (
             <ProjectCard
               key={project.title}
@@ -129,7 +128,7 @@ export default function Home() {
       </section>
 
       {/* Contact me */}
-      <section className="py-32 px-4 md:px-24 grid grid-cols-2 gap-8">
+      <section className="py-32 px-4 md:px-24 grid md:grid-cols-2 gap-8">
         <div>
           <div>
             <p className="para-sm-upper-reg text-subtle">Contact</p>
@@ -182,31 +181,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="flex flex-col gap-8">
-          <div>
-            <label className="para-sm-upper-light text-subtle" htmlFor="name">
-              Your name
-            </label>
-            <Input id="name" className="mt-4" />
-          </div>
-          <div>
-            <label className="para-sm-upper-light text-subtle" htmlFor="email">
-              Your email
-            </label>
-            <Input id="email" className="mt-4" />
-          </div>
-          <div>
-            <label className="para-sm-upper-light text-subtle" htmlFor="description">Tell me more</label>
-            <Textarea id="description" className="mt-4"/>
-          </div>
-          <div className="flex justify-between items-center">
-            <p className="para-sm-light text-subtle">Usually replies within 48 hours</p>
-            <Button className="flex items-center gap-2 para-mono-rg border-border p-4 hover:text-sky">
-                Send it
-                <ArrowUpRightIcon className="text-accent" size={16} />
-            </Button>
-          </div>
-        </div>
+        <ContactForm />
       </section>
     </div>
   );

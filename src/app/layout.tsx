@@ -3,6 +3,8 @@ import { JetBrains_Mono, Matangi } from "next/font/google";
 import "../ui/styles/globals.css";
 import { cn } from "@/lib/utils";
 import Header from "@/ui/components/Header";
+import { Toaster } from "sonner";
+import Footer from "@/ui/components/Footer";
 
 const matangi = Matangi({
   subsets: ["latin"],
@@ -37,7 +39,11 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col">
         <Header />
-        <main>{children}</main>
+        <main>
+          {children}
+        </main>
+        <Toaster/>
+        <Footer/>
       </body>
     </html>
   );

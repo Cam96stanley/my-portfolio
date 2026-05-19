@@ -29,32 +29,42 @@ export default function Header() {
             />
           </Link>
           <nav className="hidden md:flex items-center gap-8">
-            <Link className="para-mono-sm" href={"/projects"}>
+            <Link className="para-mono-sm hover:text-blue" href={"/projects"}>
               work
             </Link>
-            <Link className="para-mono-sm" href={"/about"}>
+            <Link className="para-mono-sm hover:text-blue" href={"/about"}>
               about
             </Link>
-            <a href="" className="para-mono-sm flex items-center gap-2">
+            <a
+              href="/resume.pdf"
+              download={"cameron_stanley_resume.pdf"}
+              className="para-mono-sm flex items-center gap-2 hover:text-blue"
+            >
               resume <DownloadSimpleIcon size={16} />
             </a>
           </nav>
         </div>
         <div className="flex items-center gap-6 md:gap-8">
           <div className="hidden md:flex gap-8">
-            <a href="https://github.com/Cam96stanley">
+            <a
+              href="https://github.com/Cam96stanley"
+              className="hover:text-blue"
+            >
               <GithubLogoIcon size={32} />
             </a>
-            <a href="https://www.linkedin.com/in/cameron-stanley-007908339/">
+            <a
+              href="https://www.linkedin.com/in/cameron-stanley-007908339/"
+              className="hover:text-blue"
+            >
               <LinkedinLogoIcon size={32} />
             </a>
-            <a href="mailto:cam96stanley@gmail.com">
+            <a href="mailto:cam96stanley@gmail.com" className="hover:text-blue">
               <EnvelopeIcon size={32} />
             </a>
           </div>
           <button
             type="button"
-            className="md:hidden"
+            className="md:hidden hover:text-blue"
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label="Toggle menu"
           >
@@ -80,13 +90,13 @@ export default function Header() {
             >
               about
             </Link>
-            <a
-              href=""
+            <button
+              type="button"
               className="para-mono-sm flex items-center gap-2"
               onClick={() => setMenuOpen(false)}
             >
               resume <DownloadSimpleIcon size={16} />
-            </a>
+            </button>
           </div>
           <div className="flex gap-6">
             <a href="https://github.com/Cam96stanley">

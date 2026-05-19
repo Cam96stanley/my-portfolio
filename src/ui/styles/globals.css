@@ -48,7 +48,7 @@
   --radius-4xl: calc(var(--radius) * 2.6);
   --color-subtle: var(--subtle);
   --color-blue: var(--blue);
-  --color-border: var(--border);
+  --color-sky: var(--sky);
 }
 
 body {
@@ -71,7 +71,6 @@ body {
   --accent: oklch(0.97 0 0);
   --accent-foreground: oklch(0.205 0 0);
   --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
   --input: oklch(0.922 0 0);
   --ring: oklch(0.708 0 0);
   --chart-1: oklch(0.87 0 0);
@@ -90,6 +89,7 @@ body {
   --sidebar-ring: oklch(0.708 0 0);
   --subtle: oklch(0.6018 0.0312 272.23);
   --blue: oklch(0.5787 0.2211 264.76);
+  --sky: oklch(0.83 0.09 215);
   --border: oklch(0.4909 0.0279 272.41);
 }
 

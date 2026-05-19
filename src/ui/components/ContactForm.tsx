@@ -29,7 +29,7 @@ export default function ContactForm() {
 
   const onSubmit = async (data: FormData) => {
     try {
-      await fetch(`https://ntfy.sh/${process.env.NEXT_PUBLIC_NTFY_TOPIC}`, {
+      await fetch(`https://ntfy.sh/cam-dev-alerts`, {
         method: "POST",
         body: `Name: ${data.name}\nEmail: ${data.email}\nMessage: ${data.message}`,
         headers: {

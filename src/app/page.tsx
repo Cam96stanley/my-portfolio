@@ -18,7 +18,7 @@ export default function Home() {
       {/* Hero */}
       <section className="relative overflow-hidden px-4 md:px-8 lg:px-69 py-16 lg:py-24">
         <div className="relative z-10 lg:max-w-[600px]">
-          <h1 className="flex flex-col text-[3rem] font-medium leading-[1.29] tracking-[0.021em] lg:text-[80px] lg:leading-[95px] lg:tracking-normal lg:font-normal">
+          <h1 className="flex flex-col text-[2.5rem] font-medium md:text-[3rem] leading-[1.29] tracking-[0.021em] lg:text-[80px] lg:leading-[95px] lg:tracking-normal lg:font-normal">
             <span className="text-subtle">CameronStanley:</span>
             <span className="lg:font-semibold">FullStackDev</span>
           </h1>

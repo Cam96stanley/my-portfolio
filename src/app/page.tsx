@@ -106,7 +106,6 @@ export default function Home() {
                 <Image src={item.icon} alt={item.name} width={48} height={48} />
                 <div className="flex flex-col">
                   <p className="para-md">{item.name}</p>
-                  <p className="para-sm text-subtle">Info · Info</p>
                 </div>
               </div>
             ))}
@@ -119,7 +118,6 @@ export default function Home() {
                 <Image src={item.icon} alt={item.name} width={48} height={48} />
                 <div className="flex flex-col">
                   <p className="para-md">{item.name}</p>
-                  <p className="para-sm text-subtle">Info · Info</p>
                 </div>
               </div>
             ))}

@@ -47,6 +47,8 @@
   --radius-3xl: calc(var(--radius) * 2.2);
   --radius-4xl: calc(var(--radius) * 2.6);
   --color-subtle: var(--subtle);
+  --color-blue: var(--blue);
+  --color-border: var(--border);
 }
 
 body {
@@ -87,6 +89,8 @@ body {
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
   --subtle: oklch(0.6018 0.0312 272.23);
+  --blue: oklch(0.5787 0.2211 264.76);
+  --border: oklch(0.4909 0.0279 272.41);
 }
 
 .dark {
@@ -139,134 +143,132 @@ body {
   }
 }
 
-@layer utilities {
-  .heading-1 {
-    font-family: var(--font-sans);
-    font-size: 3.75rem;
-    font-weight: 300;
-    line-height: 1;
-    letter-spacing: 0em;
-  }
+@utility heading-1 {
+  font-family: var(--font-sans);
+  font-size: 3.75rem;
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: 0em;
+}
 
-  .heading-2 {
-    font-family: var(--font-sans);
-    font-size: 3rem;
-    font-weight: 500;
-    line-height: 1.29;
-    letter-spacing: 0.021em;
-  }
+@utility heading-2 {
+  font-family: var(--font-sans);
+  font-size: 3rem;
+  font-weight: 500;
+  line-height: 1.29;
+  letter-spacing: 0.021em;
+}
 
-  .heading-3 {
-    font-family: var(--font-sans);
-    font-size: 1.875rem;
-    font-weight: 500;
-    line-height: 1.33;
-    letter-spacing: 0em;
-  }
+@utility heading-3 {
+  font-family: var(--font-sans);
+  font-size: 1.875rem;
+  font-weight: 500;
+  line-height: 1.33;
+  letter-spacing: 0em;
+}
 
-  .heding-4 {
-    font-family: var(--font-sans);
-    font-size: 1.5rem;
-    font-weight: 500;
-    line-height: 1.33;
-    letter-spacing: 0em;
-  }
+@utility heading-4 {
+  font-family: var(--font-sans);
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.33;
+  letter-spacing: 0em;
+}
 
-  .para-reg {
-    font-family: var(--font-sans);
-    font-size: 1rem;
-    font-weight: 300;
-    line-height: 1.5;
-    letter-spacing: 0em;
-  }
+@utility para-reg {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.5;
+  letter-spacing: 0em;
+}
 
-  .para-lg-light {
-    font-family: var(--font-sans);
-    font-size: 1.125rem;
-    font-weight: 300;
-    line-height: 1.55;
-    letter-spacing: 0em;
-  }
+@utility para-lg-light {
+  font-family: var(--font-sans);
+  font-size: 1.125rem;
+  font-weight: 300;
+  line-height: 1.55;
+  letter-spacing: 0em;
+}
 
-  .para-lg-reg {
-    font-family: var(--font-sans);
-    font-size: 1.125rem;
-    font-weight: 400;
-    line-height: 1.55;
-    letter-spacing: 0em;
-  }
+@utility para-lg-reg {
+  font-family: var(--font-sans);
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.55;
+  letter-spacing: 0em;
+}
 
-  .para-sm-light {
-    font-family: var(--font-sans);
-    font-size: 0.875rem;
-    font-weight: 300;
-    line-height: 1.43;
-    letter-spacing: 0em;
-  }
+@utility para-sm-light {
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  font-weight: 300;
+  line-height: 1.43;
+  letter-spacing: 0em;
+}
 
-  .para-sm-reg {
-    font-family: var(--font-sans);
-    font-size: 0.875rem;
-    font-weight: 400;
-    line-height: 1.43;
-    letter-spacing: 0em;
-  }
+@utility para-sm-reg {
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.43;
+  letter-spacing: 0em;
+}
 
-  .para-sm-upper-reg {
-    font-family: var(--font-sans);
-    font-size: 0.875rem;
-    font-weight: 400;
-    line-height: 1.43;
-    letter-spacing: 0.114em;
-    text-transform: uppercase;
-  }
+@utility para-sm-upper-reg {
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.43;
+  letter-spacing: 0.114em;
+  text-transform: uppercase;
+}
 
-  .para-sm-upper-light {
-    font-family: var(--font-sans);
-    font-size: 0.875rem;
-    font-weight: 300;
-    line-height: 1.43;
-    letter-spacing: 0.114em;
-    text-transform: uppercase;
-  }
+@utility para-sm-upper-light {
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  font-weight: 300;
+  line-height: 1.43;
+  letter-spacing: 0.114em;
+  text-transform: uppercase;
+}
 
-  .para-mini-light {
-    font-family: var(--font-sans);
-    font-size: 0.75rem;
-    font-weight: 300;
-    line-height: 1.33;
-    letter-spacing: 0em;
-  }
+@utility para-mini-light {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 300;
+  line-height: 1.33;
+  letter-spacing: 0em;
+}
 
-  .para-mini-reg {
-    font-family: var(--font-sans);
-    font-size: 0.75rem;
-    font-weight: 400;
-    line-height: 1.33;
-    letter-spacing: 0em;
-  }
+@utility para-mini-reg {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 1.33;
+  letter-spacing: 0em;
+}
 
-  .para-mono-lg {
-    font-family: var(--font-mono);
-    font-size: 1.125rem;
-    font-weight: 300;
-    line-height: 1.55;
-    letter-spacing: 0em;
-  }
+@utility para-mono-lg {
+  font-family: var(--font-mono);
+  font-size: 1.125rem;
+  font-weight: 300;
+  line-height: 1.55;
+  letter-spacing: 0em;
+}
 
-  .para-mono-rg {
-    font-family: var(--font-mono);
-    font-size: 1rem;
-    font-weight: 300;
-    line-height: 1.5;
-    letter-spacing: 0em;
-  }
+@utility para-mono-rg {
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.5;
+  letter-spacing: 0em;
+}
 
-  .para-mono-sm {
-    font-family: var(--font-mono);
-    font-size: 0.875rem;
-    font-weight: 300;
-    line-height: 1.428;
-    letter-spacing: 0em;
-  }
+@utility para-mono-sm {
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  font-weight: 300;
+  line-height: 1.428;
+  letter-spacing: 0em;
 }

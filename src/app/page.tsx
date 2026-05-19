@@ -4,6 +4,7 @@ import Link from "next/link";
 import { projectData } from "@/data/projectData";
 import ProjectCard from "@/ui/components/ProjectCard";
 import { Button } from "@/ui/primitives/Button";
+import { frontendStack, backendStack } from "@/data/techStacks";
 
 export default function Home() {
   return (
@@ -52,7 +53,7 @@ export default function Home() {
 
       {/* Projects */}
       <section>
-        <div className="px-4 md:px-8 flex gap-8 items-center py-32">
+        <div className="px-4 md:px-24 flex gap-8 items-center py-32">
           <Image alt="" src={"/cube.svg"} width={56} height={56} />
           <div className="flex flex-col">
             <p className="para-sm-upper-reg text-subtle">Selected Work</p>
@@ -69,6 +70,56 @@ export default function Home() {
           ))}
         </div>
       </section>
+
+      {/* Tech Stack */}
+      <section>
+  <div className="px-4 md:px-24 flex gap-8 items-center py-32">
+    <Image alt="" src={"/stack.svg"} width={56} height={56} />
+    <div className="flex flex-col">
+      <p className="para-sm-upper-reg text-subtle">Toolbox</p>
+      <p className="heading-2">Stack</p>
+    </div>
+  </div>
+
+  <div className="px-4 md:px-24 flex gap-8 mb-10">
+    <div className="flex items-center gap-3 w-1/2">
+      <span className="para-sm-upper-reg text-subtle">frontend</span>
+      <div className="flex-1 border-t border-gray-600" />
+    </div>
+    <div className="flex items-center gap-3 w-1/2">
+      <span className="para-sm-upper-reg text-subtle">backend</span>
+      <div className="flex-1 border-t border-gray-600" />
+    </div>
+  </div>
+
+  <div className="px-4 md:px-24 grid grid-cols-2 gap-y-10 py-10">
+    {/* Frontend column */}
+    <div className="flex flex-col gap-10">
+      {frontendStack.map((item) => (
+        <div key={item.name} className="flex items-center gap-4">
+          <Image src={item.icon} alt={item.name} width={48} height={48} />
+          <div className="flex flex-col">
+            <p className="para-md">{item.name}</p>
+            <p className="para-sm text-subtle">Info · Info</p>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    {/* Backend column */}
+    <div className="flex flex-col gap-10">
+      {backendStack.map((item) => (
+        <div key={item.name} className="flex items-center gap-4">
+          <Image src={item.icon} alt={item.name} width={48} height={48} />
+          <div className="flex flex-col">
+            <p className="para-md">{item.name}</p>
+            <p className="para-sm text-subtle">Info · Info</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
     </div>
   );
 }

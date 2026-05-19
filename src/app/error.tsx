@@ -1,12 +1,15 @@
 "use client";
 
-import { ArrowLeftIcon, ArrowCounterClockwiseIcon } from "@phosphor-icons/react/dist/ssr";
+import {
+  ArrowCounterClockwiseIcon,
+  ArrowLeftIcon,
+} from "@phosphor-icons/react/dist/ssr";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect } from "react";
 import { Button } from "@/ui/primitives/Button";
 
-export default function Error({
+export default function ErrorPage({
   error,
   reset,
 }: {
@@ -31,8 +34,7 @@ export default function Error({
         </p>
         {error.digest && (
           <p className="para-mono-sm text-subtle mb-10">
-            ref:{" "}
-            <span className="text-sky">{error.digest}</span>
+            ref: <span className="text-sky">{error.digest}</span>
           </p>
         )}
         {!error.digest && <div className="mb-10" />}

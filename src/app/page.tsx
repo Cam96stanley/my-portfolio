@@ -9,7 +9,7 @@ import Link from "next/link";
 import { projectData } from "@/data/projectData";
 import { backendStack, frontendStack } from "@/data/techStacks";
 import ContactForm from "@/ui/components/ContactForm";
-import ProjectCard from "@/ui/components/ProjectCard";
+import ProjectList from "@/ui/components/ProjectList";
 import { Button } from "@/ui/primitives/Button";
 
 export default function Home() {
@@ -40,9 +40,9 @@ export default function Home() {
               variant="outline"
               className="flex-1 font-mono font-light border-border bg-black/25 hover:bg-white/10 px-8 h-10 gap-2"
             >
-              <a href="mailto:cam96stanley@gmail.com">
+              <Link href={"/#contact"}>
                 Say hello <ArrowUpRightIcon size={16} />
-              </a>
+              </Link>
             </Button>
           </div>
         </div>
@@ -66,15 +66,7 @@ export default function Home() {
             <p className="heading-2">Projects</p>
           </div>
         </div>
-        <div className="px-4 md:px-24">
-          {projectData.map((project, i) => (
-            <ProjectCard
-              key={project.title}
-              index={String(i + 1).padStart(2, "0")}
-              {...project}
-            />
-          ))}
-        </div>
+        <ProjectList projects={projectData.slice(0, 3)} />
       </section>
 
       {/* Tech Stack */}
@@ -126,7 +118,7 @@ export default function Home() {
       </section>
 
       {/* Contact me */}
-      <section className="py-32 px-4 md:px-24 grid md:grid-cols-2 gap-8">
+      <section id="contact" className="py-32 px-4 md:px-24 grid md:grid-cols-2 gap-8">
         <div>
           <div>
             <p className="para-sm-upper-reg text-subtle">Contact</p>

@@ -81,7 +81,7 @@ export default function About() {
               variant="outline"
               className="flex-1 font-light border-border bg-black/25 hover:bg-white/10 px-8 h-10 gap-2"
             >
-              <Link href="/#projects">
+              <Link href="/projects">
                 see my work <ArrowRightIcon size={16} />
               </Link>
             </Button>

@@ -18,7 +18,8 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: "Cameron Stanley | Web Development",
-  description: "Full stack developer specializing in building scalable web and mobile applications. Available for freelance and full-time opportunities.",
+  description:
+    "Full stack developer specializing in building scalable web and mobile applications. Available for freelance and full-time opportunities.",
 };
 
 export default function RootLayout({

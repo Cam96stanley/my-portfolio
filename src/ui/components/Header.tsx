@@ -99,15 +99,27 @@ export default function Header() {
             </button>
           </div>
           <div className="flex gap-6">
-            <a href="https://github.com/Cam96stanley">
+            <Link
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://github.com/Cam96stanley"
+            >
               <GithubLogoIcon size={28} />
-            </a>
-            <a href="https://www.linkedin.com/in/cameron-stanley-007908339/">
+            </Link>
+            <Link
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.linkedin.com/in/cameron-stanley-007908339/"
+            >
               <LinkedinLogoIcon size={28} />
-            </a>
-            <a href="mailto:cam96stanley@gmail.com">
+            </Link>
+            <Link
+              target="_blank"
+              rel="noopener noreferrer"
+              href="mailto:cam96stanley@gmail.com"
+            >
               <EnvelopeIcon size={28} />
-            </a>
+            </Link>
           </div>
         </nav>
       )}

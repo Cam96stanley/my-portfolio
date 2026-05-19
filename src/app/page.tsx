@@ -1,10 +1,17 @@
-import { ArrowUpRightIcon } from "@phosphor-icons/react/dist/ssr";
+import {
+  ArrowUpRightIcon,
+  EnvelopeSimpleIcon,
+  GithubLogoIcon,
+  LinkedinLogoIcon,
+} from "@phosphor-icons/react/dist/ssr";
 import Image from "next/image";
 import Link from "next/link";
 import { projectData } from "@/data/projectData";
+import { backendStack, frontendStack } from "@/data/techStacks";
 import ProjectCard from "@/ui/components/ProjectCard";
 import { Button } from "@/ui/primitives/Button";
-import { frontendStack, backendStack } from "@/data/techStacks";
+import { Input } from "@/ui/primitives/Input";
+import { Textarea } from "@/ui/primitives/Textarea";
 
 export default function Home() {
   return (
@@ -73,53 +80,134 @@ export default function Home() {
 
       {/* Tech Stack */}
       <section>
-  <div className="px-4 md:px-24 flex gap-8 items-center py-32">
-    <Image alt="" src={"/stack.svg"} width={56} height={56} />
-    <div className="flex flex-col">
-      <p className="para-sm-upper-reg text-subtle">Toolbox</p>
-      <p className="heading-2">Stack</p>
-    </div>
-  </div>
-
-  <div className="px-4 md:px-24 flex gap-8 mb-10">
-    <div className="flex items-center gap-3 w-1/2">
-      <span className="para-sm-upper-reg text-subtle">frontend</span>
-      <div className="flex-1 border-t border-gray-600" />
-    </div>
-    <div className="flex items-center gap-3 w-1/2">
-      <span className="para-sm-upper-reg text-subtle">backend</span>
-      <div className="flex-1 border-t border-gray-600" />
-    </div>
-  </div>
-
-  <div className="px-4 md:px-24 grid grid-cols-2 gap-y-10 py-10">
-    {/* Frontend column */}
-    <div className="flex flex-col gap-10">
-      {frontendStack.map((item) => (
-        <div key={item.name} className="flex items-center gap-4">
-          <Image src={item.icon} alt={item.name} width={48} height={48} />
+        <div className="px-4 md:px-24 flex gap-8 items-center py-32">
+          <Image alt="" src={"/stack.svg"} width={56} height={56} />
           <div className="flex flex-col">
-            <p className="para-md">{item.name}</p>
-            <p className="para-sm text-subtle">Info · Info</p>
+            <p className="para-sm-upper-reg text-subtle">Toolbox</p>
+            <p className="heading-2">Stack</p>
           </div>
         </div>
-      ))}
-    </div>
 
-    {/* Backend column */}
-    <div className="flex flex-col gap-10">
-      {backendStack.map((item) => (
-        <div key={item.name} className="flex items-center gap-4">
-          <Image src={item.icon} alt={item.name} width={48} height={48} />
-          <div className="flex flex-col">
-            <p className="para-md">{item.name}</p>
-            <p className="para-sm text-subtle">Info · Info</p>
+        <div className="px-4 md:px-24 flex gap-8 mb-10">
+          <div className="flex items-center gap-3 w-1/2">
+            <span className="para-sm-upper-reg text-subtle">frontend</span>
+            <div className="flex-1 border-t border-gray-600" />
+          </div>
+          <div className="flex items-center gap-3 w-1/2">
+            <span className="para-sm-upper-reg text-subtle">backend</span>
+            <div className="flex-1 border-t border-gray-600" />
           </div>
         </div>
-      ))}
-    </div>
-  </div>
-</section>
+
+        <div className="px-4 md:px-24 grid grid-cols-2 gap-y-10 py-10">
+          {/* Frontend column */}
+          <div className="flex flex-col gap-10">
+            {frontendStack.map((item) => (
+              <div key={item.name} className="flex items-center gap-4">
+                <Image src={item.icon} alt={item.name} width={48} height={48} />
+                <div className="flex flex-col">
+                  <p className="para-md">{item.name}</p>
+                  <p className="para-sm text-subtle">Info · Info</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Backend column */}
+          <div className="flex flex-col gap-10">
+            {backendStack.map((item) => (
+              <div key={item.name} className="flex items-center gap-4">
+                <Image src={item.icon} alt={item.name} width={48} height={48} />
+                <div className="flex flex-col">
+                  <p className="para-md">{item.name}</p>
+                  <p className="para-sm text-subtle">Info · Info</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Contact me */}
+      <section className="py-32 px-4 md:px-24 grid grid-cols-2 gap-8">
+        <div>
+          <div>
+            <p className="para-sm-upper-reg text-subtle">Contact</p>
+            <p className="heading-2">
+              Get in <span className="text-subtle">touch</span>
+            </p>
+          </div>
+          <div className="py-12">
+            <p className="para-lg-light">
+              Whether it's a project, a role, or just a question — I'm always
+              happy to chat. I'll get back to you within a day or two.
+            </p>
+          </div>
+          <div className="flex flex-col gap-12">
+            <p className="para-sm-upper-reg text-subtle">
+              or reach me directly
+            </p>
+            <Link
+              href={"mailto:cam96stanley@gmail.com"}
+              className="flex items-center gap-2"
+            >
+              <EnvelopeSimpleIcon />
+              <p className="para-mono-rg cursor-pointer hover:text-sky">
+                cam96stanley@gmail.com
+              </p>
+            </Link>
+            <div className="flex gap-8">
+              <Link
+                target="_blank"
+                rel="noopener noreferrer"
+                href={"https://github.com/Cam96stanley"}
+                className="flex items-center gap-2"
+              >
+                <GithubLogoIcon className="text-sky" size={16} />
+                <p className="para-mono-sm text-subtle hover:text-accent">
+                  Github
+                </p>
+              </Link>
+              <Link
+                target="_blank"
+                rel="noopener noreferrer"
+                href={"https://www.linkedin.com/in/cameron-stanley-007908339/"}
+                className="flex items-center gap-2"
+              >
+                <LinkedinLogoIcon className="text-accent" size={16} />
+                <p className="para-mono-sm text-subtle hover:text-sky">
+                  LinkedIn
+                </p>
+              </Link>
+            </div>
+          </div>
+        </div>
+        <div className="flex flex-col gap-8">
+          <div>
+            <label className="para-sm-upper-light text-subtle" htmlFor="name">
+              Your name
+            </label>
+            <Input id="name" className="mt-4" />
+          </div>
+          <div>
+            <label className="para-sm-upper-light text-subtle" htmlFor="email">
+              Your email
+            </label>
+            <Input id="email" className="mt-4" />
+          </div>
+          <div>
+            <label className="para-sm-upper-light text-subtle" htmlFor="description">Tell me more</label>
+            <Textarea id="description" className="mt-4"/>
+          </div>
+          <div className="flex justify-between items-center">
+            <p className="para-sm-light text-subtle">Usually replies within 48 hours</p>
+            <Button className="flex items-center gap-2 para-mono-rg border-border p-4 hover:text-sky">
+                Send it
+                <ArrowUpRightIcon className="text-accent" size={16} />
+            </Button>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }

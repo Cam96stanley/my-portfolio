@@ -3,11 +3,11 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { ArrowUpRightIcon } from "@phosphor-icons/react";
 import { useForm } from "react-hook-form";
+import { toast } from "sonner";
 import z from "zod";
 import { Button } from "../primitives/Button";
 import { Input } from "../primitives/Input";
 import { Textarea } from "../primitives/Textarea";
-import { toast } from "sonner";
 
 const schema = z.object({
   name: z.string().min(1, "Name is required"),
@@ -29,20 +29,19 @@ export default function ContactForm() {
 
   const onSubmit = async (data: FormData) => {
     try {
-        await fetch(`https://ntfy.sh/${process.env.NEXT_PUBLIC_NTFY_TOPIC}`, {
-          method: "POST",
-          body: `Name: ${data.name}\nEmail: ${data.email}\nMessage: ${data.message}`,
-          headers: {
-            Title: "New Contact Form Submission",
-          },
-        });
-        toast.success("Message sent! I'll get back to you soon.");
-        reset();
+      await fetch(`https://ntfy.sh/${process.env.NEXT_PUBLIC_NTFY_TOPIC}`, {
+        method: "POST",
+        body: `Name: ${data.name}\nEmail: ${data.email}\nMessage: ${data.message}`,
+        headers: {
+          Title: "New Contact Form Submission",
+        },
+      });
+      toast.success("Message sent! I'll get back to you soon.");
+      reset();
     } catch {
-        toast.error("Something went wrong. Please try again.");
+      toast.error("Something went wrong. Please try again.");
     }
-   
-  }
+  };
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>

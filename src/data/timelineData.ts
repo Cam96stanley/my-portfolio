@@ -11,13 +11,24 @@ export type TimelineEntry = {
 
 export const timelineData: TimelineEntry[] = [
   {
+    badge: "Full Time",
+    title: "Fullstack Developer",
+    description:
+      "Designed and built full-stack web applications for nonprofit clients, managing development across the entire stack from database design and backend development to frontend implementation and deployment. Developed CRM features to support nonprofit grant management, rebuilt campaign journey interfaces, and built a Slack agent that notifies team members when users make donations to nonprofit organizations.",
+    techStack: ["Next.js", "TypeScript", "Tailwind", "Prisma"],
+    year: "2026–Present",
+    company: "Sponsor A Purpose",
+    href: "https://www.sponsorapurpose.org/",
+    side: "left",
+  },
+  {
     badge: "Intership",
     title: "Fullstack Developer",
     description:
       "Designed and built full-stack web applications for non-profit clients — handling everything from database schema to deployment.",
     techStack: ["Next.js", "TypeScript", "Tailwind", "Prisma"],
     year: "2026–Present",
-    company: "Sponsor A Purpose",
+    company: "Sponsor A Pet",
     href: "https://sponsorapet.org",
     side: "left",
   },

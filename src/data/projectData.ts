@@ -1,32 +1,14 @@
 export const projectData = [
   {
     badge: "Featured",
-    title: "Pet Foundation Website",
+    title: "Horse Rescue Non-Profit Website",
     description:
-      "A pet foundation website built with Astro, TypeScript, and Tailwind",
-    techStack: ["Astro", "TypeScript", "Tailwind"],
+      "A horse rescue non-profit website built with Next, TypeScript, Drizzle, Hono, and Tailwind",
+    techStack: ["Next", "TypeScript", "Tailwind", "Drizzle", "Hono"],
     year: "2026",
-    category: "Frontend",
-    href: "https://edmaf-webapp.vercel.app/",
-    thumbnail: "/edmaf.webp",
-  },
-  {
-    badge: "Featured",
-    title: "Humane Society Website",
-    description:
-      "A humane society website built with Next, TypeScript, Tailwind, Zod, React Hook Forms, and Prisma",
-    techStack: [
-      "Next",
-      "TypeScript",
-      "Tailwind",
-      "Zod",
-      "React Hook Forms",
-      "Prisma",
-    ],
-    year: "2026",
-    category: "frontend / backend",
-    href: "https://nw-montana-webapp.vercel.app/",
-    thumbnail: "/nw-montana.webp",
+    category: "Frontend / Backend",
+    href: "https://www.redclayrescue.org/",
+    thumbnail: "/red-clay.png",
   },
   {
     badge: "Featured",
@@ -36,7 +18,7 @@ export const projectData = [
     techStack: ["Next", "TypeScript", "Tailwind"],
     year: "2026",
     category: "Frontend",
-    href: "#",
+    href: "https://www.faithofthenations.org/",
     thumbnail: "/fotn.webp",
   },
   {

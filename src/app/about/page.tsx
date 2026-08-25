@@ -43,7 +43,7 @@ export default function About() {
           <div className="border-t border-border flex items-start justify-between pt-6 pb-8 px-6 gap-4">
             <div className="flex flex-col gap-1.5">
               <p className="text-2xl lg:text-[28px] font-bold text-sky leading-normal">
-                12+
+                6+
               </p>
               <p className="para-sm-upper-reg text-[10px] text-subtle">
                 Projects Live

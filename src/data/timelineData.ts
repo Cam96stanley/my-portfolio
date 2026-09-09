@@ -16,7 +16,7 @@ export const timelineData: TimelineEntry[] = [
     description:
       "Designed and built full-stack web applications for nonprofit clients, managing development across the entire stack from database design and backend development to frontend implementation and deployment. Developed CRM features to support nonprofit grant management, rebuilt campaign journey interfaces, and built a Slack agent that notifies team members when users make donations to nonprofit organizations.",
     techStack: ["Next.js", "TypeScript", "Tailwind", "Prisma"],
-    year: "2026–Present",
+    year: "2026",
     company: "Sponsor A Purpose",
     href: "https://www.sponsorapurpose.org/",
     side: "left",
@@ -27,7 +27,7 @@ export const timelineData: TimelineEntry[] = [
     description:
       "Designed and built full-stack web applications for non-profit clients — handling everything from database schema to deployment.",
     techStack: ["Next.js", "TypeScript", "Tailwind", "Prisma"],
-    year: "2026–Present",
+    year: "2026",
     company: "Sponsor A Pet",
     href: "https://sponsorapet.org",
     side: "left",
@@ -58,7 +58,7 @@ export const timelineData: TimelineEntry[] = [
     description:
       "Started studying frontend web development. Learning web dev foundations of HTML, CSS, and JavaScript and building small projects to develop my foundational skills.",
     techStack: ["HTML", "CSS", "JavaScript"],
-    year: "20223-2025",
+    year: "2023-2025",
     company: "Self",
     side: "right",
   },
